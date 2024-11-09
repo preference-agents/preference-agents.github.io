@@ -244,6 +244,38 @@
 </section>
 <!-- End method figure -->
 
+<!-- Results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluated our preference agents against several baselines across three datasets 
+            (Short Form: Enron-42K, Medium Form: LAMP 3U, Long Form: New Yorker) using three different large language models 
+            (Llama3 70B, Claude 3.5, Gemini 1.5 Pro) as our large model. Alongside our human evaluation scores, we also utilize GPT-4o for LLM evaluation. Our method demonstrates strong performance:
+          </p>
+          
+          <ul>
+            <li>Consistently outperformed baselines, achieving 84-91% win rates in aggregated evaluations</li>
+            <li>Strongest performance against small baseline models (91% human evaluation win rate)</li>
+            <li>Significant improvements over naive fine-tuning (92.2% human evaluation win rate)</li>
+            <li>Consistently outperformed few-shot baseline, reaching up to 73.4% aggregated win rate</li>
+          </ul>
+        </div>
+        
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <img src="static/images/results.png" alt="Results Table">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results -->
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -341,7 +373,7 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title">EMNLP Poster</h2>
 
       <iframe  src="static/pdfs/poster.pdf" width="100%" height="550">
           </iframe>
@@ -356,16 +388,25 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{shashidhar2024unsupervisedhumanpreferencelearning,
-  title={Unsupervised Human Preference Learning}, 
-  author={Sumuk Shashidhar and Abhinav Chinta and Vaibhav Sahai and Dilek Hakkani-Tür},
-  year={2024},
-  eprint={2410.03731},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2410.03731}, 
+      <pre><code>@inproceedings{shashidhar-etal-2024-unsupervised,
+    title = "Unsupervised Human Preference Learning",
+    author = "Shashidhar, Sumuk  and
+      Chinta, Abhinav  and
+      Sahai, Vaibhav  and
+      Tur, Dilek",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.200",
+    pages = "3412--3445",
+    abstract = "Large language models demonstrate impressive reasoning abilities but struggle to provide personalized content due to their lack of individual user preference information. Existing methods, such as in-context learning and parameter-efficient fine-tuning, fall short in capturing the complexity of human preferences, especially given the small, personal datasets individuals possess. In this paper, we propose a novel approach utilizing small parameter models as preference agents to generate natural language rules that guide a larger, pre-trained model, enabling efficient personalization. Our method involves a small, local {``}steering wheel{''} model that directs the outputs of a much larger foundation model, producing content tailored to an individual{'}s preferences while leveraging the extensive knowledge and capabilities of the large model. Importantly, this personalization is achieved without the need to fine-tune the large model. Experimental results on email and article datasets, demonstrate that our technique significantly outperforms baseline personalization methods. By allowing foundation models to adapt to individual preferences in a data and compute-efficient manner, our approach paves the way for highly personalized language model applications.",
 }</code></pre>
-    </div>
+  </div>
 </section>
 <!--End BibTex citation -->
 
